@@ -33,3 +33,7 @@ print(age)
 #2. Ask the user for a credit card number and let them know if it is valid
 #3. If the credit card is valid then reduce balance by $39
 #4. Write and test a function to vaccinate Bonnie 
+def verify_credit_card(card_num):
+  if len(card_num) == 19:
+    return True
+  return False
