@@ -1,5 +1,11 @@
 #Tutorial 3 Lists:
 #1. Create an example of parallel lists eg: pet_name, species, age, vaccination_status for three pets
+names = ['Rocky', 'Foxy', 'Bella']
+animal_categories = ['Cat', 'Fox', 'Rabbit']
+ages = [5,8,3]
+
+for name in names:
+    print(name)
 #2. Use a for loop to print parallel list details. This will mean that one complete printout will look like:
 '''
 Pet name: Foxy
