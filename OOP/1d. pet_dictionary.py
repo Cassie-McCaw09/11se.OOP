@@ -5,17 +5,20 @@
 
 pet1 = {
 'name' : 'Bonnie',
-'animal category' : 'Cat',
+'animal_category' :'Cat',
 'age' : 3,
-'vaccinated' : True,
-'credit card' : '3423 2326 7543 1234',
-'billing address' : '17 Park Drive, The Shire 3695',
-'owner name' : 'Annie Jenkins',
-'account balance' : 129.95,
+'vaccinated' : True
+'credt_card' : '3423 2326 7543 1234'
+'billing_address' : '17 Park Drive, The Shire 3695',
+'owner_name' : 'Annie Jenkins',
+'account_balance' : 129.95,
 }
 
+pet1['vaccinated'] = False
 
-
+for item in pet1:
+    print(item,':', pet1[item])
+ 
 #ACTIVITIES:
 #1. Change name to Miss Bonnie
 #2. Increase age by 1
