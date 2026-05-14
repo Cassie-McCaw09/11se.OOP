@@ -9,7 +9,28 @@ class Pet:
         self.age = age
         self.ccard = 'unknown'
         self.vaccinated = False
+        
+    def __str__(self):
+        payment_status ='unregistered'
+        if len(self.ccard) ==19:
+            payment_status = 'registered'
+        my_status = 'Name ' + self.name +'\nCategory: ' + self.category + '\nAge: ' + str(self.age) +'\npayment_status: ' + payment_status + '\nVaccinated: ' +str(self.vaccinated)
+        return my_status
 
+
+
+p1 = Pet('Bonnie', 'Cat')
+p2 = Pet('Clyde', 'Dog', 7)
+p3 = Pet('Ruby', 'Rabbit', 13)
+p4 = Pet('Dawson', 'Hamster', 10)
+p5 = Pet('Piper', 'Turtle', 8)
+
+pets = [p1, p2, p3, p4]
+pets.append(p5)
+for pet in pets:
+    pet.vaccinated = True
+    print(pet)
+    print('')
 
 
 #ACTIVITIES:
