@@ -14,9 +14,7 @@ class Pet:
         payment_status ='unregistered'
         if len(self.ccard) ==19:
             payment_status = 'registered'
-        my_status = 'Name ' + self.name +'\nCategory: ' +
-        self.category + '\nAge: ' + str(self.age) +'\npayment_status: '
-        + payment_status + '\nVaccinated: ' +str(self.vaccinated)
+        my_status = 'Name ' + self.name +'\nCategory: ' + self.category + '\nAge: ' + str(self.age) +'\npayment_status: ' + payment_status + '\nVaccinated: ' +str(self.vaccinated)
         return my_status
 
 
