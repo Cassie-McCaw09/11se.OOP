@@ -21,7 +21,7 @@ class Fighter:
             return False
 
     def random_attack(self):
-        attack_power = random.randint(self.weapon/2, self.weapon*2)
+        attack_power = random.randint(self.weapon//2, self.weapon*2)
         print('Attack power:', attack_power)
         return attack_power
 
