@@ -1,5 +1,6 @@
 import random, time 
 
+#purpose: These are the general variables for fighters, some variables may be added depending on the fighter chosen. 
 class Fighter:
     def __init__(self,name, starting_health, weapon, shield):
         self.name = name
@@ -8,7 +9,7 @@ class Fighter:
         self.shield = shield
 
     def report(self):
-        print(self.name+':'+ ' Health: '+ str(self.__health))
+        print(f"{self.name}: Health: {self.__health}")
 
     def is_dead(self):
         if self.__health <= 0:
@@ -45,7 +46,7 @@ class Fighter:
         else:
             print('No damage')
 
-
+# purpose: These are the variables for the wizard to keep track of stats throughout the game
 class Wizard(Fighter):
     def __init__(self,name, starting_health, weapon, shield,magic):
         super().__init__(name, starting_health, weapon, shield)
@@ -55,10 +56,17 @@ class Wizard(Fighter):
         attack_power = random.randint(self.weapon//2, self.weapon*2)
         print('Attack power:', attack_power)
         return attack_power + self.magic
-    
+ # purpose: This is the 2nd enemy within the class, there are different variables including all the inherited varibles   
 class Troll(Fighter):
     def __init__(self,name,starting_health,weapon,shield,power):
-        super().__init__(name, starting_health, weapon, shield, power)
+        #pass only the 4 arguements the fighter class expects
+        super().__init__(name, starting_health, weapon, shield)
+        self.name = name
+        self.health = starting_health
+        self.weapon = weapon
+        self.shield = shield
+
+        #set power here instead 
         self.power = power
 
     def random_attack(self):
@@ -66,9 +74,9 @@ class Troll(Fighter):
         print('Attack power:', attack_power)
         return attack_power + self.power
 
-
-you = Fighter(50,45,80,100,)
-wiz = Wizard('The Grey Wizard',55,85,100,50)
+# pupose: number variables for each corresponding variable. 
+you = Fighter('Ninja', 100,50,80)
+wiz = Wizard('Wizard',55,85,100,50)
 troll = Troll('Troll',55,85,100,40)
 
 you.report()
@@ -98,7 +106,7 @@ while True:
     troll.report
     time.sleep(3)
     print('')
-    if wiz.starting_health <=10 : wiz._is_dead
+    if wiz.starting_health <=10 : wiz._is_dead #still working on this! 
     print ('you win')
     break 
 print(wiz.name,'attacks you . . .')
@@ -106,6 +114,5 @@ you.defend(wiz.random_attack())
 you.report()
 time.sleep(2)
 if you.is_dead():
-        print(wiz.name,'wins')
-        break
-    print('')
+    print(wiz.name,'wins')
+    
