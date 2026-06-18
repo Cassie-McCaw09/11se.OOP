@@ -1,4 +1,34 @@
+# Create a welcome page 
+# create user guide/steps 
+#try to make welcome page as simple as possible. 
+#100 points of stats to be assigned to the character - can be randomised 
 import random, time 
+
+print('Welcome') 
+time.sleep(3)
+print ('Choose your Fighter')
+choice = input('Choose your fighter')
+time.sleep(2)
+print('1. Ninja')
+print('2. Warrior')
+print('3. Tank')
+if choice: ('1. Ninja')
+print ('You are now a Ninja!')
+if choice: ('2. Warrior')
+print('You are now a Warrior!')
+if choice: ('3. Tank') 
+print ('You are now a Tank!')
+time.sleep(3)
+choice = input('Choose your rival')
+time.sleep(3)
+print('1. Troll')
+print('2. Wizard')
+if choice: ('1.Troll')
+print ('You are fighting a Troll, Good luck!')
+if choice: ('2. Wizard')
+print ('You are battling Wizard, Good Luck!')
+time.sleep(3)
+
 
 #purpose: These are the general variables for fighters, some variables may be added depending on the fighter chosen. 
 class Fighter:
@@ -26,6 +56,7 @@ class Fighter:
         attack_power = random.randint(self.weapon//2, self.weapon*2)
         target = random.randint(2,6)
         print('Hit enter in exactly',target,'seconds')
+        print(5,4,3)
         tic = time.time()
         input()
         toc = time.time()
@@ -75,7 +106,7 @@ class Troll(Fighter):
         return attack_power + self.power
 
 # pupose: number variables for each corresponding variable. 
-you = Fighter('Ninja', 100,50,80)
+you = Fighter('Fighter', 100,50,80)
 wiz = Wizard('Wizard',55,85,100,50)
 troll = Troll('Troll',55,85,100,40)
 
